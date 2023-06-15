@@ -1,5 +1,5 @@
 .App {
-  text-align: center;
+  text-align: start;
 }
 
 .App-logo {
@@ -15,7 +15,7 @@
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -24,8 +24,11 @@
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.App-button {
+  background-color: #61dafb;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
 }
 
 @keyframes App-logo-spin {
@@ -34,5 +37,99 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 75%;
+  margin-bottom: 25px;
+}
+
+h1 {
+  font-weight: 400;
+  display: flex;
+
+  align-items: center;
+}
+
+h2 {
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 25px;
+  text-align: start;
+}
+
+input {
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid gray;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.close {
+  display: block;
+  position: absolute;
+  cursor: pointer;
+  right: 25px;
+  width: 30px;
+  height: 30px;
+  --weight: 3px;
+  --aa: 1px; /* anti-aliasing */
+  --color: black;
+  border-radius: 3px;
+  background: linear-gradient(
+      45deg,
+      transparent calc(50% - var(--weight) - var(--aa)),
+      var(--color) calc(50% - var(--weight)),
+      var(--color) calc(50% + var(--weight)),
+      transparent calc(50% + var(--weight) + var(--aa))
+    ),
+    linear-gradient(
+      -45deg,
+      transparent calc(50% - var(--weight) - var(--aa)),
+      var(--color) calc(50% - var(--weight)),
+      var(--color) calc(50% + var(--weight)),
+      transparent calc(50% + var(--weight) + var(--aa))
+    );
+}
+
+button {
+  border-radius: 25px;
+  padding: 10px;
+  color: white;
+  background-color: darkorchid;
+  letter-spacing: 2px;
+  margin-top: 25px;
+  cursor: pointer;
+  &:hover {
+    background-color: purple;
+  }
+}
+
+footer {
+  position: absolute;
+  top: auto;
+  bottom: 44px;
+  width: 33%;
+}
+
+.linkHelp {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-decoration: none;
+  opacity: 0.8;
+  color: black;
+
+  .letter {
+    margin-top: 1px;
+  }
+
+  &:hover {
+    opacity: 1;
   }
 }

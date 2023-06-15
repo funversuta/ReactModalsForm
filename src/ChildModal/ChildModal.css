@@ -1,0 +1,53 @@
+.modalz {
+  height: 110vh;
+  width: 33vw;
+  background-color: rgba(0, 0, 0, 0.4);
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.modalz.active {
+  opacity: 1;
+  pointer-events: all;
+  overflow: hidden;
+}
+
+.modalz__content {
+  padding: 20px;
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: white;
+  width: auto;
+  height: fit-content;
+  transform: scale(0.5);
+  transition: 0.4s all;
+}
+
+.modalz__content.active {
+  transform: scale(1);
+  margin: 25px;
+}
+
+.button {
+  color: blue;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 400;
+  margin-bottom: 15px;
+
+  &:hover {
+    color: darkorchid;
+    text-decoration: underline;
+  }
+}
+
+.childModal {
+  text-align: start;
+}
