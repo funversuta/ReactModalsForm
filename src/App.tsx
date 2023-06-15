@@ -6,7 +6,7 @@ import "./App.css";
 import ChildModal from "./ChildModal/ChildModal";
 
 function App() {
-  const [modalActive, setModalActive] = useState(true);
+  const [modalActive, setModalActive] = useState(false);
   const [modal2Active, setModal2Active] = useState(false);
   const [modal3Active, setModal3Active] = useState(false);
   const [email, setEmail] = useState("");
@@ -70,7 +70,7 @@ function App() {
         <img src={logo} className="App-logo" alt="logo" />
         <p>Register form with modals</p>
         <button className="App-button" onClick={() => setModalActive(true)}>
-          Learn React
+          Модальное окно
         </button>
       </header>
       <Modal className="modal" active={modalActive} setActive={setModalActive}>
